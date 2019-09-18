@@ -1,0 +1,251 @@
+﻿@page
+@model SBoxManager.Pages.odo.historiales.DetailsModel
+
+@{
+    ViewData["Title"] = "Historial Medico";
+}
+
+@section MiStilos{
+
+    <link href="~/css/UserCard.css" rel="stylesheet" />
+
+}
+
+<h2>Details</h2>
+
+<div class="col-lg-3 col-sm-6">
+
+    <div class="card hovercard">
+        <div class="cardheader">
+
+        </div>
+        <div class="avatar">
+            <img alt="" src="http://lorempixel.com/100/100/people/9/">
+        </div>
+        <div class="info">
+            <div class="title">
+                @Model.PacienteHistorial.Paciente.Persona.NombreCompleto()
+            </div>
+            <div class="desc">Edad: @Model.PacienteHistorial.Paciente.Edad años</div>
+            <div class="desc">Curious developer</div>
+            <div class="desc">Tech geek</div>
+        </div>
+        <div class="bottom">
+            <a class="btn btn-primary btn-twitter btn-sm" href="https://twitter.com/webmaniac">
+                <i class="fa fa-twitter"></i>
+            </a>
+            <a class="btn btn-danger btn-sm" rel="publisher"
+               href="https://plus.google.com/+ahmshahnuralam">
+                <i class="fa fa-google-plus"></i>
+            </a>
+            <a class="btn btn-primary btn-sm" rel="publisher"
+               href="https://plus.google.com/shahnuralam">
+                <i class="fa fa-facebook"></i>
+            </a>
+            <a class="btn btn-warning btn-sm" rel="publisher" href="https://plus.google.com/shahnuralam">
+                <i class="fa fa-behance"></i>
+            </a>
+        </div>
+    </div>
+
+</div>
+
+<div>
+    <h4>Historial Medico de: @Model.PacienteHistorial.Paciente.Persona.NombreCompleto() </h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PacienteHistorial.Motivo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PacienteHistorial.Motivo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PacienteHistorial.Antecedentes)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PacienteHistorial.Antecedentes)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PacienteHistorial.FechaUltimaConsulta)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PacienteHistorial.FechaUltimaConsulta)
+            <small id="fechaDesdeDisplay"></small>
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PacienteHistorial.DetalleUltimaConsulta)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PacienteHistorial.DetalleUltimaConsulta)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PacienteHistorial.ProblemasAnteriores)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PacienteHistorial.ProblemasAnteriores)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PacienteHistorial.Tratamiento)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PacienteHistorial.Tratamiento)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PacienteHistorial.Cirugia)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PacienteHistorial.Cirugia)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PacienteHistorial.MotivoCirugia)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PacienteHistorial.MotivoCirugia)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PacienteHistorial.Medico)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PacienteHistorial.Medico)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PacienteHistorial.PresionArterial)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PacienteHistorial.PresionArterial)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PacienteHistorial.RenalesGenitales)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PacienteHistorial.RenalesGenitales)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PacienteHistorial.Gastrointestinales)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PacienteHistorial.Gastrointestinales)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PacienteHistorial.Hepaticos)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PacienteHistorial.Hepaticos)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PacienteHistorial.Pulmonales)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PacienteHistorial.Pulmonales)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PacienteHistorial.DiabetesMellitus)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PacienteHistorial.DiabetesMellitus)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PacienteHistorial.FiebreReumatica)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PacienteHistorial.FiebreReumatica)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PacienteHistorial.Sanguineos)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PacienteHistorial.Sanguineos)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PacienteHistorial.Alergicos)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PacienteHistorial.Alergicos)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PacienteHistorial.ConsumeMedic)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PacienteHistorial.ConsumeMedic)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PacienteHistorial.VihSida)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PacienteHistorial.VihSida)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PacienteHistorial.Venereas)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PacienteHistorial.Venereas)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PacienteHistorial.Fuma)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PacienteHistorial.Fuma)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PacienteHistorial.ConsumAlcohol)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PacienteHistorial.ConsumAlcohol)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PacienteHistorial.Penicilina)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PacienteHistorial.Penicilina)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PacienteHistorial.Aspirina)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PacienteHistorial.Aspirina)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PacienteHistorial.ProbAnestesia)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PacienteHistorial.ProbAnestesia)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PacienteHistorial.Habitos)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PacienteHistorial.Habitos)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PacienteHistorial.Embarazada)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PacienteHistorial.Embarazada)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PacienteHistorial.Paciente)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PacienteHistorial.Paciente.Id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.PacienteHistorial.Id">Edit</a> |
+    <a asp-page="../pacientes/Details" asp-route-codigo="@Model.PacienteHistorial.Paciente.Persona.Codigo">Volver a Detalles del Paciente</a>
+    <input type="hidden" value="@Model.PacienteHistorial.FechaUltimaConsulta" id="ultfecha" />
+</div>
+
+@section Scripts {
+    <script src="~/lib/moment.js/moment-with-locales.min.js"></script>
+    <script>
+        window.onload = function () {
+            let ultfecha = document.querySelector('#ultfecha');
+            let fechaDisp = document.querySelector('#fechaDesdeDisplay');
+
+            moment.locale('es');
+            fechaDisp.innerHTML = moment(ultfecha.value, "YYYYMMDD").fromNow();
+        }
+    </script>
+}

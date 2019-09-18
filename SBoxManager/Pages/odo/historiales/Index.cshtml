@@ -1,0 +1,204 @@
+﻿@page
+@model SBoxManager.Pages.odo.historiales.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PacienteHistorial[0].Motivo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PacienteHistorial[0].Antecedentes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PacienteHistorial[0].FechaUltimaConsulta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PacienteHistorial[0].DetalleUltimaConsulta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PacienteHistorial[0].ProblemasAnteriores)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PacienteHistorial[0].Tratamiento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PacienteHistorial[0].Cirugia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PacienteHistorial[0].MotivoCirugia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PacienteHistorial[0].Medico)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PacienteHistorial[0].PresionArterial)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PacienteHistorial[0].RenalesGenitales)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PacienteHistorial[0].Gastrointestinales)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PacienteHistorial[0].Hepaticos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PacienteHistorial[0].Pulmonales)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PacienteHistorial[0].DiabetesMellitus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PacienteHistorial[0].FiebreReumatica)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PacienteHistorial[0].Sanguineos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PacienteHistorial[0].Alergicos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PacienteHistorial[0].ConsumeMedic)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PacienteHistorial[0].VihSida)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PacienteHistorial[0].Venereas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PacienteHistorial[0].Fuma)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PacienteHistorial[0].ConsumAlcohol)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PacienteHistorial[0].Penicilina)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PacienteHistorial[0].Aspirina)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PacienteHistorial[0].ProbAnestesia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PacienteHistorial[0].Habitos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PacienteHistorial[0].Embarazada)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PacienteHistorial[0].Paciente)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.PacienteHistorial) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Motivo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Antecedentes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaUltimaConsulta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DetalleUltimaConsulta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProblemasAnteriores)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tratamiento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cirugia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MotivoCirugia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Medico)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PresionArterial)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RenalesGenitales)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gastrointestinales)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Hepaticos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pulmonales)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DiabetesMellitus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FiebreReumatica)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sanguineos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Alergicos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ConsumeMedic)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VihSida)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Venereas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fuma)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ConsumAlcohol)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Penicilina)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Aspirina)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProbAnestesia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Habitos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Embarazada)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Paciente.Id)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

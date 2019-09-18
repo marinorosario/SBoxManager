@@ -1,0 +1,54 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <UserSecretsId>aspnet-SBoxManager-D7839058-4D86-4023-A0EA-835C98ACE256</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Data\Migrations\20190907214445_inicio.cs" />
+    <Compile Remove="Data\Migrations\20190907214445_inicio.Designer.cs" />
+    <Compile Remove="Data\Migrations\20190907214601_inicio.cs" />
+    <Compile Remove="Data\Migrations\20190907214601_inicio.Designer.cs" />
+    <Compile Remove="Data\Migrations\20190907214938_inicio.cs" />
+    <Compile Remove="Data\Migrations\20190907214938_inicio.Designer.cs" />
+    <Compile Remove="Data\Migrations\20190907215144_inicio.cs" />
+    <Compile Remove="Data\Migrations\20190907215144_inicio.Designer.cs" />
+    <Compile Remove="Data\Migrations\20190907215650_inicio.cs" />
+    <Compile Remove="Data\Migrations\20190907215650_inicio.Designer.cs" />
+    <Compile Remove="Data\Migrations\20190907220355_inicio.cs" />
+    <Compile Remove="Data\Migrations\20190907220355_inicio.Designer.cs" />
+    <Compile Remove="Data\Migrations\20190907220745_inicio.cs" />
+    <Compile Remove="Data\Migrations\20190907220745_inicio.Designer.cs" />
+    <Compile Remove="Data\Migrations\20190907221340_inicio.cs" />
+    <Compile Remove="Data\Migrations\20190907221340_inicio.Designer.cs" />
+    <Compile Remove="Data\Migrations\20190907221606_inicio.cs" />
+    <Compile Remove="Data\Migrations\20190907221606_inicio.Designer.cs" />
+    <Compile Remove="Data\Migrations\20190907222131_inicio.cs" />
+    <Compile Remove="Data\Migrations\20190907222131_inicio.Designer.cs" />
+    <Compile Remove="Data\Migrations\20190907233850_relacion-usuario-persona.cs" />
+    <Compile Remove="Data\Migrations\20190907233850_relacion-usuario-persona.Designer.cs" />
+    <Compile Remove="Data\Migrations\20190908010607_paciente-historial-detalles-telefonospersona.cs" />
+    <Compile Remove="Data\Migrations\20190908010607_paciente-historial-detalles-telefonospersona.Designer.cs" />
+    <Compile Remove="Data\Migrations\20190908031018_paciente-subirFoto.cs" />
+    <Compile Remove="Data\Migrations\20190908031018_paciente-subirFoto.Designer.cs" />
+    <Compile Remove="Data\Migrations\20190909171743_persona-nombre-completo.cs" />
+    <Compile Remove="Data\Migrations\20190909171743_persona-nombre-completo.Designer.cs" />
+    <Compile Remove="Data\Migrations\20190909191206_persona-chequeo-concurrente.cs" />
+    <Compile Remove="Data\Migrations\20190909191206_persona-chequeo-concurrente.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="2.1.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Identity\Services\" />
+    <Folder Include="Data\DTOs\SALES\" />
+    <Folder Include="wwwroot\fotos\" />
+  </ItemGroup>
+
+</Project>

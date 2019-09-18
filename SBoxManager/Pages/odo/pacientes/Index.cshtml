@@ -1,0 +1,64 @@
+﻿@page
+@model SBoxManager.Pages.odo.pacientes.IndexModel
+
+@{
+    ViewData["Title"] = "Pacientes";
+}
+
+@section MiStilos{
+    <link href="~/css/Paciente.css" rel="stylesheet" />
+}
+
+<h2>Index</h2>
+
+
+
+<div class="well well-sm">
+    <a asp-page="Create" class="btn btn-success">Create New</a>
+</div>
+
+<div class="row">
+
+    @foreach (var item in Model.Paciente) { 
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            <div class="well well-sm">
+                <div class="row">
+                    <div class="col-sm-6 col-md-4">
+                        <img src="http://placehold.it/380x500" alt="" class="img-rounded img-responsive" />
+                    </div>
+                    <div class="col-sm-6 col-md-8">
+                        <h4>
+                            @item.Persona.NombreCompleto()
+                        </h4>
+                        <small>
+                            <cite title="Sexo">
+                               Sexo:  @item.Persona.Sexo 
+                            </cite>
+                        </small>
+                        <p>
+                            Edad: @item.Edad
+                            <br />
+                            <hr />
+                            <br />
+                            Creado: @item.Creado
+                        </p>
+                        <!-- Split button -->
+                        <div class="btn-group">                            
+                            <a asp-page="./Details" asp-route-codigo="@item.Persona.Codigo" class="btn btn-primary">Details</a>
+                            <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                <span class="caret"></span><span class="sr-only">Opciones</span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">                                
+                                <li><a asp-page="./Edit" asp-route-id="@item.Id">Edit</a></li>                                
+                                <li class="divider"></li>
+                                <li><a asp-page="./Delete" asp-route-id="@item.Id">Delete</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    }
+
+</div>

@@ -1,0 +1,215 @@
+﻿@page
+@model SBoxManager.Pages.odo.historiales.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>PacienteHistorial</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="PacienteHistorial.Id" />
+            <div class="form-group">
+                <label asp-for="PacienteHistorial.Motivo" class="control-label"></label>
+                <textarea asp-for="PacienteHistorial.Motivo" class="form-control"></textarea>
+                <span asp-validation-for="PacienteHistorial.Motivo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PacienteHistorial.Antecedentes" class="control-label"></label>
+                <textarea asp-for="PacienteHistorial.Antecedentes" class="form-control"></textarea>
+                <span asp-validation-for="PacienteHistorial.Antecedentes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PacienteHistorial.FechaUltimaConsulta" class="control-label"></label>
+                <input asp-for="PacienteHistorial.FechaUltimaConsulta" class="form-control" />
+                <span asp-validation-for="PacienteHistorial.FechaUltimaConsulta" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PacienteHistorial.DetalleUltimaConsulta" class="control-label"></label>
+                <textarea asp-for="PacienteHistorial.DetalleUltimaConsulta" class="form-control"></textarea>
+                <span asp-validation-for="PacienteHistorial.DetalleUltimaConsulta" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PacienteHistorial.ProblemasAnteriores" class="control-label"></label>
+                <textarea asp-for="PacienteHistorial.ProblemasAnteriores" class="form-control"></textarea>
+                <span asp-validation-for="PacienteHistorial.ProblemasAnteriores" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PacienteHistorial.Tratamiento" class="control-label"></label>
+                <textarea asp-for="PacienteHistorial.Tratamiento" class="form-control"></textarea>
+                <span asp-validation-for="PacienteHistorial.Tratamiento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="PacienteHistorial.Cirugia" /> @Html.DisplayNameFor(model => model.PacienteHistorial.Cirugia)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="PacienteHistorial.MotivoCirugia" class="control-label"></label>
+                <input asp-for="PacienteHistorial.MotivoCirugia" class="form-control" />
+                <span asp-validation-for="PacienteHistorial.MotivoCirugia" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PacienteHistorial.Medico" class="control-label"></label>
+                <input asp-for="PacienteHistorial.Medico" class="form-control" />
+                <span asp-validation-for="PacienteHistorial.Medico" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="PacienteHistorial.PresionArterial" /> @Html.DisplayNameFor(model => model.PacienteHistorial.PresionArterial)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="PacienteHistorial.RenalesGenitales" /> @Html.DisplayNameFor(model => model.PacienteHistorial.RenalesGenitales)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="PacienteHistorial.Gastrointestinales" /> @Html.DisplayNameFor(model => model.PacienteHistorial.Gastrointestinales)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="PacienteHistorial.Hepaticos" /> @Html.DisplayNameFor(model => model.PacienteHistorial.Hepaticos)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="PacienteHistorial.Pulmonales" /> @Html.DisplayNameFor(model => model.PacienteHistorial.Pulmonales)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="PacienteHistorial.DiabetesMellitus" /> @Html.DisplayNameFor(model => model.PacienteHistorial.DiabetesMellitus)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="PacienteHistorial.FiebreReumatica" /> @Html.DisplayNameFor(model => model.PacienteHistorial.FiebreReumatica)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="PacienteHistorial.Sanguineos" /> @Html.DisplayNameFor(model => model.PacienteHistorial.Sanguineos)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="PacienteHistorial.Alergicos" /> @Html.DisplayNameFor(model => model.PacienteHistorial.Alergicos)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="PacienteHistorial.ConsumeMedic" /> @Html.DisplayNameFor(model => model.PacienteHistorial.ConsumeMedic)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="PacienteHistorial.VihSida" /> @Html.DisplayNameFor(model => model.PacienteHistorial.VihSida)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="PacienteHistorial.Venereas" /> @Html.DisplayNameFor(model => model.PacienteHistorial.Venereas)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="PacienteHistorial.Fuma" /> @Html.DisplayNameFor(model => model.PacienteHistorial.Fuma)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="PacienteHistorial.ConsumAlcohol" /> @Html.DisplayNameFor(model => model.PacienteHistorial.ConsumAlcohol)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="PacienteHistorial.Penicilina" /> @Html.DisplayNameFor(model => model.PacienteHistorial.Penicilina)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="PacienteHistorial.Aspirina" /> @Html.DisplayNameFor(model => model.PacienteHistorial.Aspirina)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="PacienteHistorial.ProbAnestesia" /> @Html.DisplayNameFor(model => model.PacienteHistorial.ProbAnestesia)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="PacienteHistorial.Habitos" /> @Html.DisplayNameFor(model => model.PacienteHistorial.Habitos)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="PacienteHistorial.Embarazada" /> @Html.DisplayNameFor(model => model.PacienteHistorial.Embarazada)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="PacienteHistorial.PacienteId" class="control-label"></label>
+                <select asp-for="PacienteHistorial.PacienteId" class="form-control" asp-items="ViewBag.PacienteId"></select>
+                <span asp-validation-for="PacienteHistorial.PacienteId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

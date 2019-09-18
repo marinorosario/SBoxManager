@@ -1,0 +1,88 @@
+﻿@page
+@model SBoxManager.Pages.odo.pacientes.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Paciente</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Paciente.Foto)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Paciente.Foto)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Paciente.Edad)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Paciente.Edad)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Paciente.Direccion)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Paciente.Direccion)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Paciente.Ocupacion)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Paciente.Ocupacion)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Paciente.Creado)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Paciente.Creado)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Paciente.CreadoPor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Paciente.CreadoPor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Paciente.Modificado)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Paciente.Modificado)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Paciente.ModificadoPor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Paciente.ModificadoPor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Paciente.IsDelete)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Paciente.IsDelete)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Paciente.Eliminado)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Paciente.Eliminado)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Paciente.EliminadoPor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Paciente.EliminadoPor)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Paciente.Id" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

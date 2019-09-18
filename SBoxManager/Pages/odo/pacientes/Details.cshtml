@@ -1,0 +1,112 @@
+﻿@page
+@model SBoxManager.Pages.odo.pacientes.DetailsModel
+
+@{
+    ViewData["Title"] = "Detalles del Paciente";
+}
+
+<h2>Details</h2>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+
+            <div>
+                <h4>Paciente: @Model.Paciente.Persona.NombreCompleto()</h4>
+                <hr />
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Paciente.Foto)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Paciente.Foto)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Paciente.Persona.Nombre)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Paciente.Persona.Nombre)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Paciente.Persona.Apellido)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Paciente.Persona.Apellido)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Paciente.Persona.Sexo)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Paciente.Persona.Sexo)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Paciente.Persona.DoB)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Paciente.Persona.DoB) | (@Html.DisplayNameFor(model => model.Paciente.Edad): @Html.DisplayFor(model => model.Paciente.Edad) Años)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Paciente.Direccion)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Paciente.Direccion)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Paciente.Ocupacion)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Paciente.Ocupacion)
+                    </dd>
+                </dl>
+            </div>
+
+
+        </div>        
+        <div class="col-sm-6">
+            <div class="well well-sm">
+                Historia Medica y Dental                
+            </div>
+
+            <div>
+                <a asp-page="../historiales/Create" asp-route-id="@Model.Paciente.Id" class="btn btn-success">Crear Historial</a>
+            </div>
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>@Html.DisplayNameFor(model => model.Paciente.Historiales.ToList()[0].Creado)</th>
+                        <th>Creado por</th>                        
+                        <th></th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <td colspan="5">Cantidad: 10</td>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    @foreach (var item in Model.Paciente.Historiales)
+                    {
+                    <tr>
+                        <td><small>Histotial</small></td>
+                        <td>@item.Creado</td>
+                        <td>@item.CreadoPor</td>                        
+                        <td><a asp-page="../historiales/Details" asp-route-id="@item.Id" class="btn btn-xs btn-primary">Ver</a> </td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Paciente.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
