@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using SBoxManager.Data;
+using SBoxManager.Data.DTOs;
 using SBoxManager.Data.DTOs.ODO;
 
 namespace SBoxManager.Pages.odo.historiales
@@ -45,7 +46,14 @@ namespace SBoxManager.Pages.odo.historiales
             _context.PacienteHistoriales.Add(PacienteHistorial);
             await _context.SaveChangesAsync();
 
-            return RedirectToPage("./Index");
+            await _context.PacienteHistoriales
+                .Include(ph => ph.Paciente)
+                .ThenInclude(pa => pa.Persona).FirstOrDefaultAsync();
+
+            Guid? codigoID = PacienteHistorial.Paciente.Persona.Codigo;
+
+            //return RedirectToPage("./Index");
+            return RedirectToPage("../pacientes/Details", new { codigo = codigoID });
         }
     }
 }

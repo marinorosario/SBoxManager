@@ -4,50 +4,35 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using SBoxManager.Data.DTOs.ODO;
-using SBoxManager.Services.Interfaces;
 
 namespace SBoxManager.api
 {
     [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
-    public class HistorialDetallesController : ControllerBase
+    public class HistorialController : ControllerBase
     {
-        private readonly IHistorialDetallesService _historialDetalles;
-
-        public HistorialDetallesController(IHistorialDetallesService historialDetalles)
-        {
-            _historialDetalles = historialDetalles;
-        }
-
-        // GET: api/HistorialDetalles
-        
+        // GET: api/Historial
+        [HttpGet]
         public IEnumerable<string> Get()
         {
             return new string[] { "value1", "value2" };
         }
 
-        // GET: api/HistorialDetalles/5
-        [HttpGet("{id}", Name = "Get")]
+        // GET: api/Historial/5
+        [HttpGet("{id}", Name = "GetHistorial")]
         public string Get(int id)
         {
             return "value";
         }
 
-        [HttpGet("GetAll/{id}", Name = "GetAll")]        
-        public IEnumerable<HistorialDetalle> GetAllById(int id)
-        {
-            return _historialDetalles.ReadAll(id);
-        }
-
-        // POST: api/HistorialDetalles
+        // POST: api/Historial
         [HttpPost]
         public void Post([FromBody] string value)
         {
         }
 
-        // PUT: api/HistorialDetalles/5
+        // PUT: api/Historial/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {
@@ -57,7 +42,7 @@ namespace SBoxManager.api
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-            
+            Console.WriteLine("Hola");
         }
     }
 }
